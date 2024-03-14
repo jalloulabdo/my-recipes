@@ -1,5 +1,5 @@
 ## Demo
-[https://my-recipes.netlify.app](https://my-recipes.netlify.app/)
+[https://my-recipes-mu.vercel.app](https://my-recipes-mu.vercel.app)
 
 ## Installation
 1. Clone the repository
