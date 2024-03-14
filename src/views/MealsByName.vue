@@ -2,13 +2,17 @@
   <div class="p-8 pb-0">
     <h1 class="text-4xl font-bold mb-4 text-orange-500">Search Meals by Name</h1>
   </div>
-  <div class="px-8 pb-3">
+  <div class="px-8 pb-8">
     <input
       type="text"
       v-model="keyword"
       class="rounded border-2 bg-white border-gray-200 focus:ring-orange-500 focus:border-orange-500 w-full"
       placeholder="Search for Meals"
       @change="searchMeals"
+      style="padding: 1rem 0.75rem;
+    border-radius: 9px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;"
     />
   </div>
 

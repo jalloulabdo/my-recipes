@@ -1,28 +1,29 @@
 <template>
-  <div
-    class="bg-white shadow rounded-xl hover:scale-105 transition-all"
-  >
+  <div class="grid-item">
     <router-link :to="{ name: 'mealDetails', params: { id: meal.idMeal } }">
-      <img
-        :src="meal.strMealThumb"
-        :alt="meal.strMeal"
-        class="rounded-t-xl w-full h-48 object-cover"
-      />
+      <img class="img-responsive" :src="meal.strMealThumb" :alt="meal.strMeal">
     </router-link>
-    <div class="p-3">
-      <h3 class="font-bold">{{ meal.strMeal }}</h3>
-      <p class="mb-4">
-        {{ $filters.truncateWords(meal.strInstructions, 20) }}
-      </p>
-      <div class="flex items-center justify-between">
-        <YouTubeButton :href="meal.strYoutube" />
+    <router-link class="project-description" :to="{ name: 'mealDetails', params: { id: meal.idMeal } }">
+
+      <div class="project-text-holder">
+        <div class="project-text-inner">
+          <h3 style="font-size: 23px;">{{ meal.strMeal }}</h3>
+          <p>Discover more</p>
+          <!-- <div class="flex items-center justify-center">
+            <YouTubeButton :href="meal.strYoutube" />
+          </div> -->
+        </div>
       </div>
-    </div>
+    </router-link>
   </div>
+
 </template>
+
+
 
 <script setup>
 import YouTubeButton from './YouTubeButton.vue';
+import { computed, onMounted, ref } from "vue";
 
 const { meal } = defineProps({
   meal: {
@@ -30,5 +31,7 @@ const { meal } = defineProps({
     type: Object
   }
 })
-
+onMounted(async () => {
+  masonryBuild();
+});
 </script>
