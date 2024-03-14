@@ -8,16 +8,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="./index.html" class="navbar-brand">My recipes</a>
+      <router-link :to="{ name: 'home' }" class="navbar-brand">My recipes</router-link>
+  
     </div>
 
     <nav class="sidebar">
       <div class="navbar-collapse" id="navbar-collapse">
         <div class="site-header hidden-xs">
-          <a class="site-brand" href="./index.html" title="">
+          <router-link :to="{ name: 'home' }" class="site-brand">
             <img class="img-responsive site-logo" alt="" src="../assets/my-recipes-logo.png">
-            My Recipes
-          </a>
+            
+          My recipes</router-link>
           <p>Home cooks are our heroes—it's as simple as that. My recipe is a community built by and for kitchen experts: The cooks who will dedicate the weekend to a perfect beef bourguignon but love the simplicity of a slow-cooker rendition, too.</p>
         </div>
         <ul class="nav pb-4">
